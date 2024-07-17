@@ -7,23 +7,25 @@
 }
 
 body {
-    background-color: rgb(223, 209, 209);
+    background-color:rgb(33, 33, 33) 
 }
 
 a,
 a:link,
 a:visited {
     text-decoration: none;
+    color: black;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: beige;
+    align-items: top;
+    background-color: rgba(231, 231, 231, 0.9);
     min-height: 100px;
     width: 100%;
     position: fixed;
@@ -38,28 +40,31 @@ header #nav-button {
 nav {
     width: 100%;
     position: absolute;
-    top: 105px;
+    top: 100px;
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
 }
 
 nav ul {
-    width: 95%;
     margin:auto;
     display: flex;
     flex-direction: column;
     gap: 5px;
     list-style: none;
-    border-radius: 10px;
-    background-color: beige;
+    background-color: rgba(231, 231, 231, 0.9);
     box-shadow: 5px 2px 5px black;
 }
 
 nav li {
-    
     text-align: center;
-    padding: 10px 0px;
+    padding: 10px;
+    transition: all 0.5s;
+}
 
+nav li a{
+    font-size: 1.25rem;
+    color: black;
 }
 
 nav li:hover {
@@ -92,6 +97,7 @@ header .nav-icon {
     float: right;
     margin: auto 10px;
     padding: 10px;
+    transition: all 0.5s;
 }
 
 header .nav-icon:hover {
@@ -104,6 +110,7 @@ header .navicon {
     height: 3px;
     background-color: black;
     position: relative;
+    transition-delay: 0s, 1s;
 }
 
 header .navicon::before,
@@ -118,10 +125,12 @@ header .navicon::after {
 
 header .navicon::before {
     top: -5px;
+    transition: all 0.5s;
 }
 
 header .navicon::after {
     top: 5px;
+    transition: all 0.5s;
 }
 
 /* Dropdown menu transition */
@@ -141,12 +150,14 @@ header .navicon::after {
 }
 
 #nav-button:checked~nav {
-    min-height: 240px;
+    max-height: 240px;
 }
+
+/* Styling the Grid on Home Page */
 
 .home-grid {
     display: grid;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 30px auto;
     padding: 1rem;
     grid-gap: 1.5rem;
@@ -162,21 +173,33 @@ header .navicon::after {
 }
 
 .grid-item {
+    display: grid;
+    align-items: center;
+    text-align: center;
     width: 100%;
     min-height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
+    transition: scale 0.3s ease-in-out;
+    opacity: 0.6;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item:hover {
+    scale: 105%;
+    opacity: 1;
 }
 
 .grid-item:nth-child(1) {
     grid-area: one;
-    background-color: blue;
-    text-align: center;
+    background-image: url('../media/images/excited.jpg');
+    color: whitesmoke;
 }
 
 .grid-item:nth-child(2) {
     grid-area: two;
-    background-color: rgb(255, 21, 0);
-    text-align: center;
+    background-image: url('../media/images/scholarship.jpg');
+    color: whitesmoke;
 }
 
 .grid-item:nth-child(3) {
@@ -196,11 +219,20 @@ header .navicon::after {
 
 footer {
     margin-top: 20px;
+    background-color: rgba(231, 231, 231, 0.9);
+    min-height: 2rem;
 }
+
+.footer {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
 
 /* Add responsive element to the menu */
 
-@media (min-width: 800px) {
+@media (min-width: 880px) {
     header .nav-icon {
         display: none;
     }
@@ -220,6 +252,7 @@ footer {
         gap: 10px;
         margin-right: 40px;
         box-shadow: none;
+        background: transparent;
     }
 
     nav li {
@@ -249,6 +282,7 @@ footer {
     .icon {
         height: 100%;
         width: auto;
+        transition: all 0.5s;
     }
 
     .icon:hover {
