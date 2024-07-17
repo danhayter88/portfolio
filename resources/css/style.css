@@ -12,4 +12,15 @@ header {
     min-height: 100px;
     width: 100%;
     position: fixed;
+    display: flex;
+    z-index: 3;
+}
+
+header #nav-button {
+    display: none;
+}
+
+main {
+    position: relative;
+    top: 100px;
 }
