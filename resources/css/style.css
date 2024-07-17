@@ -183,6 +183,7 @@ header .navicon::after {
     opacity: 0.6;
     background-size: cover;
     background-position: center;
+    border: 0.1rem solid rgba(245, 245, 245, 0.6);
 }
 
 .grid-item:hover {
@@ -204,17 +205,20 @@ header .navicon::after {
 
 .grid-item:nth-child(3) {
     grid-area: three;
-    background-color: rgb(51, 255, 0);
+    background-image: url('../media/images/ideas.jpg');
+    color: whitesmoke;
 }
 
 .grid-item:nth-child(4) {
     grid-area: four;
-    background-color: rgb(230, 0, 255);
+    background-image: url('../media/images/views.jpg');
+    color: whitesmoke;
 }
 
 .grid-item:nth-child(5) {
     grid-area: five;
-    background-color: rgb(68, 68, 98);
+    background-image: url(../media/images/contact.jpg);
+    color: whitesmoke;
 }
 
 footer {
