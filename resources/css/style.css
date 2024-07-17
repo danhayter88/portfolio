@@ -63,8 +63,7 @@ nav li:hover {
 }
 
 main {
-    position: relative;
-    top: 100px;
+    margin-top: 100px;
     width: 100%;
 }
 
@@ -141,41 +140,49 @@ header .navicon::after {
     min-height: 240px;
 }
 
+
 .home-grid {
     display: grid;
     max-width: 1000px;
     margin: 30px auto;
     padding: 1rem;
-    grid-gap: 1rem;
-    grid-template-areas: 'about'
-                        'introduction'
-                        'more';
+    grid-gap: 1.5rem;
+    grid-template-areas:
+                        'one'
+                        'one'
+                        'three'
+                        'four'
+                        'five';
 }
 
-.about {
-    grid-area: about;
+.home-grid img {
+    height: 100%;
+    width: 100%;
+}
+
+.home-grid img:nth-child(1) {
+    grid-area: one;
     background-color: blue;
-    width: 100%;
 }
 
-.about img {
-    width: 100%;
-    border-radius: 50%;
+.home-grid img:nth-child(2) {
+    grid-area: two;
 }
 
-.introduction {
-    grid-area: introduction;
-    background-color: red;
+.home-grid img:nth-child(3) {
+    grid-area: three;
 }
 
-.more {
-    grid-area: more;
-    background-color: green;
+.home-grid img:nth-child(4) {
+    grid-area: four;
 }
 
-.home-grid div {
-    padding: 10px;
-    border-radius: 20px;
+.home-grid img:nth-child(5) {
+    grid-area: five;
+}
+
+footer {
+    margin-top: 20px;
 }
 
 /* Add responsive element to the menu */
@@ -208,8 +215,11 @@ header .navicon::after {
     }
 
     .home-grid {
-        grid-template-areas: 'about introduction '
-                            'more more';
+        grid-template-areas: 
+                            'one one'
+                            'two three'
+                            'four three'
+                            'four five';
     }
 }
 
@@ -237,9 +247,11 @@ header .navicon::after {
     }
 
     .home-grid {
-        grid-template-areas: 'about introduction introduction introduction'
-                        'about introduction introduction introduction'
-                        '. introduction introduction introduction'
-                        'more more more more';
+        grid-template-areas: 
+                            'one one two'
+                            'one one two'
+                            'three three four'
+                            'three three four'
+                            'five five .';
     }
 }
