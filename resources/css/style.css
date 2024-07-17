@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
@@ -25,8 +25,6 @@ header {
     position: fixed;
     top: 0px;
     z-index: 2;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 }
 
 header #nav-button {
@@ -147,11 +145,11 @@ header .navicon::after {
     display: grid;
     max-width: 1000px;
     margin: 30px auto;
+    padding: 1rem;
     grid-gap: 1rem;
-    grid-template-areas: 'about introduction introduction introduction'
-                        'about introduction introduction introduction'
-                        '. introduction introduction introduction'
-                        'more more more more';
+    grid-template-areas: 'about'
+                        'introduction'
+                        'more';
 }
 
 .about {
@@ -208,6 +206,11 @@ header .navicon::after {
         padding: 0px 20px 0px 20px;
         border: none;
     }
+
+    .home-grid {
+        grid-template-areas: 'about introduction '
+                            'more more';
+    }
 }
 
 @media (min-width: 1200px) {
@@ -231,5 +234,12 @@ header .navicon::after {
 
     nav ul {
         justify-content: center;
+    }
+
+    .home-grid {
+        grid-template-areas: 'about introduction introduction introduction'
+                        'about introduction introduction introduction'
+                        '. introduction introduction introduction'
+                        'more more more more';
     }
 }
