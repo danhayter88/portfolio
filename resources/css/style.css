@@ -6,9 +6,6 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
-    background-color:rgb(33, 33, 33) 
-}
 
 a,
 a:link,
@@ -18,7 +15,7 @@ a:visited {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 3vw, 7rem);
 }
 
 header {
@@ -133,6 +130,19 @@ header .navicon::after {
     transition: all 0.5s;
 }
 
+/*Styling the website sections*/
+.section {
+    width: 100%;
+}
+
+.section:nth-child(even) {
+    background-color: rgb(63, 63, 63);
+}
+
+.section:nth-child(odd) {
+    background-color: rgb(224, 224, 224);
+}
+
 /* Dropdown menu transition */
 
 #nav-button:checked~.nav-icon .navicon {
@@ -155,29 +165,20 @@ header .navicon::after {
 
 /* Styling the Grid on Home Page */
 
-.home-grid {
-    display: grid;
+.project-grid {
     max-width: 1200px;
-    margin: 30px auto;
-    padding: 1rem;
-    grid-gap: 1.5rem;
-    grid-auto-rows: 1fr;
-    grid-auto-columns: 1fr;
-    grid-template-areas:
-                        'one'
-                        'one'
-                        'two'
-                        'three'
-                        'four'
-                        'five';
+    display: grid;
+    margin: auto;
+    padding: 0px 10px;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
 .grid-item {
     display: grid;
     align-items: center;
     text-align: center;
-    width: 100%;
-    min-height: 200px;
+    aspect-ratio: 3/2;
     border-radius: 10px;
     transition: scale 0.3s ease-in-out;
     opacity: 0.6;
@@ -192,31 +193,26 @@ header .navicon::after {
 }
 
 .grid-item:nth-child(1) {
-    grid-area: one;
     background-image: url('../media/images/excited.jpg');
     color: whitesmoke;
 }
 
 .grid-item:nth-child(2) {
-    grid-area: two;
     background-image: url('../media/images/scholarship.jpg');
     color: whitesmoke;
 }
 
 .grid-item:nth-child(3) {
-    grid-area: three;
     background-image: url('../media/images/ideas.jpg');
     color: whitesmoke;
 }
 
 .grid-item:nth-child(4) {
-    grid-area: four;
     background-image: url('../media/images/views.jpg');
     color: whitesmoke;
 }
 
 .grid-item:nth-child(5) {
-    grid-area: five;
     background-image: url(../media/images/contact.jpg);
     color: whitesmoke;
 }
@@ -264,13 +260,11 @@ footer {
         border: none;
     }
 
-    .home-grid {
-        grid-template-areas: 
-                            'one one'
-                            'two three'
-                            'four three'
-                            'four five';
+    .grid-item.featured {
+        grid-column: span 2;
+        grid-row: span 2;
     }
+
 }
 
 @media (min-width: 1200px) {
@@ -297,12 +291,4 @@ footer {
         justify-content: center;
     }
 
-    .home-grid {
-        grid-template-areas: 
-                            'one one two'
-                            'one one two'
-                            'three four four'
-                            'three four four'
-                            'five five five';
-    }
 }
