@@ -14,8 +14,19 @@ a:visited {
     color: black;
 }
 
+img, svg {
+    max-width: 100%;
+}
+
 h1 {
     font-size: clamp(2rem, 3vw, 7rem);
+}
+
+h1.section-title {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
 header {
@@ -163,18 +174,30 @@ header .navicon::after {
     max-height: 240px;
 }
 
-/* Styling the Grid on Home Page */
 
-.project-grid {
+
+.section-div {
     max-width: 1200px;
-    display: grid;
     margin: auto;
     padding: 0px 10px;
+}
+
+/* Styling the Grid on the About section */
+
+.about-grid {
+    display: grid;
+    gap: .3rem;
+    grid-template-columns: 1fr;
+}
+
+/* Styling the Grid on Project Section */
+.project-grid {
+    display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
-.grid-item {
+.project-grid-item {
     display: grid;
     align-items: center;
     text-align: center;
@@ -187,32 +210,32 @@ header .navicon::after {
     border: 0.1rem solid rgba(245, 245, 245, 0.6);
 }
 
-.grid-item:hover {
-    scale: 105%;
+.project-grid-item:hover {
+    scale: 110%;
     opacity: 1;
 }
 
-.grid-item:nth-child(1) {
+.project-grid-item:nth-child(1) {
     background-image: url('../media/images/excited.jpg');
     color: whitesmoke;
 }
 
-.grid-item:nth-child(2) {
+.project-grid-item:nth-child(2) {
     background-image: url('../media/images/scholarship.jpg');
     color: whitesmoke;
 }
 
-.grid-item:nth-child(3) {
+.project-grid-item:nth-child(3) {
     background-image: url('../media/images/ideas.jpg');
     color: whitesmoke;
 }
 
-.grid-item:nth-child(4) {
+.project-grid-item:nth-child(4) {
     background-image: url('../media/images/views.jpg');
     color: whitesmoke;
 }
 
-.grid-item:nth-child(5) {
+.project-grid-item:nth-child(5) {
     background-image: url(../media/images/contact.jpg);
     color: whitesmoke;
 }
@@ -260,7 +283,7 @@ footer {
         border: none;
     }
 
-    .grid-item.featured {
+    .project-grid-item.featured {
         grid-column: span 2;
         grid-row: span 2;
     }
