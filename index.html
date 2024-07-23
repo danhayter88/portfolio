@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,6 @@
 <body>
     <header>
         <a href="" class="website-name">Dan Hayter</a>
-        <input type="checkbox" id="nav-button">
         <nav>
             <ul>
                 <li><a href="#home-section">Home</a></li>
@@ -22,9 +22,13 @@
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
-        <label for="nav-button" class="nav-icon">
-            <span class="navicon"></span>
-        </label>
+        <button class="navicon">
+            <svg class="hamburger" viewbox="0 0 100 100" aria-controls="primary">
+                <rect class="line top" x="10" y="25" height="7" width="80" fill="black" rx="3.5" />
+                <rect class="line middle" x="10" y="46.5" height="7" width="80" fill="black" rx="3.5" />
+                <rect class="line bottom" x="10" y="68" height="7" width="80" fill="black" rx="3.5" />
+            </svg>
+        </button>
         <div class="social-media-links">
             <img src="./resources/media/images/linkedin-icon.svg" alt="Linkedin icon" class="icon">
             <img src="./resources/media/images/facebook-icon.svg" alt="Facebook icon" class="icon">
@@ -51,7 +55,14 @@
                     </div>
                     <div class="about-grid-item">
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione in officia consequatur deleniti, iusto quod aperiam, et delectus minus minima odio assumenda natus facere ea laudantium. Amet, quaerat dignissimos expedita enim sequi esse necessitatibus quis assumenda doloremque tempore. A voluptates quas cum dolor. Id voluptatibus amet numquam, animi eos quia, magni velit, consequuntur pariatur cupiditate dignissimos dolorum aliquam tenetur in rerum sint laudantium? Quibusdam sequi exercitationem magni necessitatibus voluptates odit odio dolorum dolor facere rem nesciunt veritatis, ipsa vero modi neque officiis molestiae non illo quidem cumque. Maxime ex, reprehenderit vel soluta assumenda eos illum quos.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione in officia consequatur
+                            deleniti, iusto quod aperiam, et delectus minus minima odio assumenda natus facere ea
+                            laudantium. Amet, quaerat dignissimos expedita enim sequi esse necessitatibus quis assumenda
+                            doloremque tempore. A voluptates quas cum dolor. Id voluptatibus amet numquam, animi eos
+                            quia, magni velit, consequuntur pariatur cupiditate dignissimos dolorum aliquam tenetur in
+                            rerum sint laudantium? Quibusdam sequi exercitationem magni necessitatibus voluptates odit
+                            odio dolorum dolor facere rem nesciunt veritatis, ipsa vero modi neque officiis molestiae
+                            non illo quidem cumque. Maxime ex, reprehenderit vel soluta assumenda eos illum quos.
                         </p>
                     </div>
                 </div>
@@ -60,29 +71,29 @@
         <section class="section" id="project-section">
             <div class="section-wrapper">
                 <h1 class="section-title">Projects</h2>
-                <div class="section-div project-grid">
-                    <div class="project-grid-item featured">
-                        <h2>Holder 1</h2>
+                    <div class="section-div project-grid">
+                        <div class="project-grid-item featured">
+                            <h2>Holder 1</h2>
+                        </div>
+                        <div class="project-grid-item">
+                            <h2>Holder 2</h2>
+                        </div>
+                        <div class="project-grid-item">
+                            <h2>Holder 3</h2>
+                        </div>
+                        <div class="project-grid-item">
+                            <h2>Holder 4</h2>
+                        </div>
+                        <div class="project-grid-item">
+                            <h2>Holder 5</h2>
+                        </div>
                     </div>
-                    <div class="project-grid-item">
-                        <h2>Holder 2</h2>
-                    </div>
-                    <div class="project-grid-item">
-                        <h2>Holder 3</h2>
-                    </div>
-                    <div class="project-grid-item">
-                        <h2>Holder 4</h2>
-                    </div>
-                    <div class="project-grid-item">
-                        <h2>Holder 5</h2>
-                    </div>
-                </div>
             </div>
         </section>
         <section class="section" id="contact-section">
             <div class="section-wrapper">
-            <h1 class="section-title">Contact</h1>
-                <div >
+                <h1 class="section-title">Contact</h1>
+                <div>
                     <form id="contact-form">
                         <div class="form-item">
                             <label for="contact-name">Name :</label>
@@ -96,7 +107,7 @@
                             <textarea id="contact-message">Message</textarea>
                         </div>
                         <div class="form-item">
-                        <input type="button" class="button" value="Submit">
+                            <input type="button" class="button" value="Submit">
                         </div>
                     </form>
                 </div>
