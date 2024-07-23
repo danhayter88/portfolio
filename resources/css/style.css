@@ -1,5 +1,6 @@
 *, html {
     scroll-behavior: smooth !important;
+    scroll-padding: 5rem;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +11,9 @@
 
 body {
     position: absolute;
+    min-width: 100vw;
 }
+
 a,
 a:link,
 a:visited {
@@ -20,6 +23,10 @@ a:visited {
 
 img, svg {
     max-width: 100%;
+}
+
+p {
+    padding-block: 1rem;
 }
 
 h1 {
@@ -46,6 +53,10 @@ header {
     width: 100%;
     height: 5rem;
     z-index: 2;
+}
+
+main {
+    padding-top: 5rem;
 }
 
 .website-name {
@@ -203,7 +214,6 @@ nav li:hover {
 /*Styling the website sections*/
 .section {
     min-height: 100vh;
-    padding-top: 5rem;
     width: 100%;
 }
 
@@ -217,6 +227,10 @@ nav li:hover {
     .full-width-home {
         grid-template-columns: 2fr 1fr;
     }
+}
+
+.home-title {
+    padding-right: 1rem;
 }
 
 #contact-section{
@@ -278,12 +292,9 @@ nav li:hover {
     }
 }
 
-.about-grid img {
-    border-radius: 50%;
-}
-
 .about-grid h2 {
-    text-align: center;
+    text-align: left;
+    padding-bottom: 1rem;
 }
 
 /* Styling the Grid on Project Section */
