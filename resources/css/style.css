@@ -103,6 +103,7 @@ nav li:hover {
     margin-right: 1rem;
     border: none;
     background: transparent;
+    --navicon-color: black;
 }
 
 .navicon .line {
@@ -113,7 +114,7 @@ nav li:hover {
     transform-origin: center;
 }
 
-.navicon:hover .line {
+.navicon[aria-expanded="true"] .line {
     transition: 
         y 300ms ease-in,
         rotate 300ms ease-in 300ms,
@@ -122,26 +123,34 @@ nav li:hover {
 
 /* Dropdown menu transition */
 
-.navicon:hover :is(.top, .bottom) {
+.navicon[aria-expanded="true"] :is(.top, .bottom) {
     y: 46.5;
 }
 
-.navicon:hover .top {
+.navicon[aria-expanded="true"] .top {
     rotate: 45deg;
 }
 
-.navicon:hover .bottom {
+.navicon[aria-expanded="true"] .bottom {
     rotate: -45deg;
 }
 
-.navicon:hover .middle {
+.navicon[aria-expanded="true"] .middle {
     opacity: 0;
+}
+
+.navicon[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.navicon[aria-expanded="true"] ~ nav {
+    max-height: 300px;
 }
 
 /* Add responsive element to the menu */
 
 @media (min-width: 880px) {
-    header .nav-icon {
+    header .navicon {
         display: none;
     }
 

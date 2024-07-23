@@ -14,6 +14,13 @@
 <body>
     <header>
         <a href="" class="website-name">Dan Hayter</a>
+        <button class="navicon" aria-controls="primary" aria-expanded="false">
+            <svg fill="var(--navicon-color)" class="hamburger" viewbox="0 0 100 100">
+                <rect class="line top" x="10" y="25" height="7" width="80" rx="3.5" />
+                <rect class="line middle" x="10" y="46.5" height="7" width="80" rx="3.5" />
+                <rect class="line bottom" x="10" y="68" height="7" width="80" rx="3.5" />
+            </svg>
+        </button>
         <nav>
             <ul>
                 <li><a href="#home-section">Home</a></li>
@@ -22,13 +29,6 @@
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
-        <button class="navicon">
-            <svg class="hamburger" viewbox="0 0 100 100" aria-controls="primary">
-                <rect class="line top" x="10" y="25" height="7" width="80" fill="black" rx="3.5" />
-                <rect class="line middle" x="10" y="46.5" height="7" width="80" fill="black" rx="3.5" />
-                <rect class="line bottom" x="10" y="68" height="7" width="80" fill="black" rx="3.5" />
-            </svg>
-        </button>
         <div class="social-media-links">
             <img src="./resources/media/images/linkedin-icon.svg" alt="Linkedin icon" class="icon">
             <img src="./resources/media/images/facebook-icon.svg" alt="Facebook icon" class="icon">
@@ -121,6 +121,7 @@
             </div>
         </div>
     </footer>
+    <script src="./resources/script/script.js"></script>
 </body>
 
 </html>
