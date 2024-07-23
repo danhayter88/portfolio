@@ -349,7 +349,10 @@ main {
 
 /*Styling Contact Section */
 
-
+.form {
+    width: fit-content;
+    margin-inline: auto;
+}
 
 footer {
     padding-top: 20px;
@@ -380,5 +383,5 @@ footer {
     width: 20rem;
     max-width: 80%;
     height: 10rem;
-    align-self: center;
+    justify-self: center;
 }
