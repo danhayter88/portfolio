@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-size: 25px;
     font-family: 'DM Serif Display', serif;
+    --color-1: rgb(12, 12, 12);
+    --color-2: whitesmoke;
+    --color-3: rgb(231, 231, 231);
+    --color-3-transparent: rgba(231, 231, 231, 0.9);
 }
 
 
@@ -18,7 +22,7 @@ a,
 a:link,
 a:visited {
     text-decoration: none;
-    color: black;
+    color: var(--color-1)
 }
 
 img, svg {
@@ -46,7 +50,7 @@ h2 {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(231, 231, 231, 0.9);
+    background-color: var(--color-3-transparent);
     position: fixed;
     align-items: center;
     top: 0px;
@@ -55,14 +59,10 @@ header {
     z-index: 2;
 }
 
-main {
-    padding-top: 5rem;
-}
-
 .website-name {
     padding-left: 1rem;
     font-size: 2rem;
-    color: black;
+    color: var(--color-1);
     height: min-content;
 }
 
@@ -82,8 +82,8 @@ nav ul {
     flex-direction: column;
     gap: 5px;
     list-style: none;
-    background-color: rgba(231, 231, 231, 0.9);
-    box-shadow: 5px 2px 5px black;
+    background-color: var(--color-3-transparent);
+    box-shadow: 5px 2px 5px var(--color-1);
 }
 
 nav li {
@@ -94,7 +94,7 @@ nav li {
 
 nav li a{
     font-size: 1.25rem;
-    color: black;
+    color: var(--color-1);
 }
 
 nav li:hover {
@@ -114,7 +114,7 @@ nav li:hover {
     margin-right: 1rem;
     border: none;
     background: transparent;
-    --navicon-color: black;
+    --navicon-color: var(--color-1);
 }
 
 .navicon .line {
@@ -212,6 +212,11 @@ nav li:hover {
 }
 
 /*Styling the website sections*/
+
+main {
+    padding-top: 5rem;
+}
+
 .section {
     min-height: 100vh;
     width: 100%;
@@ -238,11 +243,11 @@ nav li:hover {
 }
 
 .section:nth-child(even) {
-    background-color: rgb(12, 12, 12);
+    background-color: var(--color-1);
 }
 
 .section:nth-child(odd) {
-    background-color: rgba(231, 231, 231);
+    background-color: var(--color-3);
 }
 
 .section-wrapper {
@@ -270,10 +275,10 @@ nav li:hover {
 }
 
 .section:nth-child(even) h1.section-title {
-    color: whitesmoke;
+    color: var(--color-2);
 }
 .section:nth-child(odd) h1.section-title {
-     color: black;
+     color: var(--color-1);
 }
 
 /* Styling the Grid on the About section */
@@ -282,7 +287,7 @@ nav li:hover {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
-    color: whitesmoke;
+    color: var(--color-2);
     align-items: start;
 }
 
@@ -314,6 +319,7 @@ nav li:hover {
     opacity: 0.6;
     background-size: cover;
     background-position: center;
+    color: var(--color-2);
 }
 
 .project-grid-item:hover {
@@ -323,27 +329,22 @@ nav li:hover {
 
 .project-grid-item:nth-child(1) {
     background-image: url('../media/images/excited.jpg');
-    color: whitesmoke;
 }
 
 .project-grid-item:nth-child(2) {
     background-image: url('../media/images/scholarship.jpg');
-    color: whitesmoke;
 }
 
 .project-grid-item:nth-child(3) {
     background-image: url('../media/images/ideas.jpg');
-    color: whitesmoke;
 }
 
 .project-grid-item:nth-child(4) {
     background-image: url('../media/images/views.jpg');
-    color: whitesmoke;
 }
 
 .project-grid-item:nth-child(5) {
     background-image: url(../media/images/contact.jpg);
-    color: whitesmoke;
 }
 
 /*Styling Contact Section */
@@ -352,7 +353,7 @@ nav li:hover {
 
 footer {
     padding-top: 20px;
-    background-color: rgba(231, 231, 231, 0.9);
+    background-color: var(--color-3-transparent);
     min-height: 3rem;
 }
 
@@ -367,7 +368,7 @@ footer {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    color: whitesmoke;
+    color: var(--color-2);
     margin: auto;
 }
 
