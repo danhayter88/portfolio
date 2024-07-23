@@ -1,123 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link href="./resources/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link href="./resources/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="" class="website-name">Dan Hayter</a>
-        <button class="navicon" aria-controls="primary" aria-expanded="false">
-            <svg fill="var(--navicon-color)" class="hamburger" viewbox="0 0 100 100">
-                <rect class="line top" x="10" y="25" height="7" width="80" rx="3.5" />
-                <rect class="line middle" x="10" y="46.5" height="7" width="80" rx="3.5" />
-                <rect class="line bottom" x="10" y="68" height="7" width="80" rx="3.5" />
-            </svg>
-        </button>
-        <nav>
-            <ul>
-                <li><a href="#home-section">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#project-section">Projects</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="social-media-links">
-            <img src="./resources/media/images/linkedin-icon.svg" alt="Linkedin icon" class="icon">
-            <img src="./resources/media/images/facebook-icon.svg" alt="Facebook icon" class="icon">
-            <img src="./resources/media/images/x-icon.svg" alt="X Icon" class="icon">
-        </div>
+      <a href="" class="website-name">Dan Hayter</a>
+      <button class="navicon" aria-controls="primary" aria-expanded="false">
+        <svg
+          fill="var(--navicon-color)"
+          class="hamburger"
+          viewbox="0 0 100 100"
+        >
+          <rect class="line top" x="10" y="25" height="7" width="80" rx="3.5" />
+          <rect
+            class="line middle"
+            x="10"
+            y="46.5"
+            height="7"
+            width="80"
+            rx="3.5"
+          />
+          <rect
+            class="line bottom"
+            x="10"
+            y="68"
+            height="7"
+            width="80"
+            rx="3.5"
+          />
+        </svg>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#home-section">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#project-section">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-media-links">
+        <img
+          src="./resources/media/images/linkedin-icon.svg"
+          alt="Linkedin icon"
+          class="icon"
+        />
+        <img
+          src="./resources/media/images/facebook-icon.svg"
+          alt="Facebook icon"
+          class="icon"
+        />
+        <img
+          src="./resources/media/images/x-icon.svg"
+          alt="X Icon"
+          class="icon"
+        />
+      </div>
     </header>
     <main>
-        <section class="section" id="home-section">
-            <div class="full-width-home">
-                <div class="home-title">
-                    <h1>Web Development</h1>
-                    <h1>For Your Needs</h1>
-                </div>
-                <img src="./resources/media/images/home.jpg">
+      <section class="section" id="home-section">
+        <div class="full-width-home">
+          <div class="home-title">
+            <h1>Web Development</h1>
+            <h1>For Your Needs</h1>
+          </div>
+          <img src="./resources/media/images/home.jpg" />
+        </div>
+      </section>
+      <section class="section" id="about-section">
+        <div class="section-wrapper">
+          <h1 class="section-title">About</h1>
+          <div class="about-grid">
+            <div class="about-grid-item">
+              <img
+                src="./resources/media/images/about-img.jpg"
+                class="about-img"
+              />
             </div>
-        </section>
-        <section class="section" id="about-section">
-            <div class="section-wrapper">
-                <h1 class="section-title">About</h1>
-                <div class="about-grid">
-                    <div class="about-grid-item">
-                        <img src="./resources/media/images/about-img.jpg" class="about-img">
-                    </div>
-                    <div class="about-grid-item">
-                        <h2>Simple and Intuitive</h2>
-                        <p>
-                            Easy and usable user-interfaces, designed specifically for your needs.
-                        </p>
-                        <p>
-                            Adaptable and versatile, whatever the size of your screen.
-                        </p>
-                    </div>
-                </div>
+            <div class="about-grid-item">
+              <h2>Simple and Intuitive</h2>
+              <p>
+                Easy and usable user-interfaces, designed specifically for your
+                needs.
+              </p>
+              <p>Adaptable and versatile, whatever the size of your screen.</p>
             </div>
-        </section>
-        <section class="section" id="project-section">
-            <div class="section-wrapper">
-                <h1 class="section-title">Projects</h2>
-                    <div class="section-div project-grid">
-                        <div class="project-grid-item featured">
-                            <h2>Holder 1</h2>
-                        </div>
-                        <div class="project-grid-item">
-                            <h2>Holder 2</h2>
-                        </div>
-                        <div class="project-grid-item">
-                            <h2>Holder 3</h2>
-                        </div>
-                        <div class="project-grid-item">
-                            <h2>Holder 4</h2>
-                        </div>
-                        <div class="project-grid-item">
-                            <h2>Holder 5</h2>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="project-section">
+        <div class="section-wrapper">
+          <h1 class="section-title">Projects</h1>
+          <div class="section-div project-grid">
+            <div class="project-grid-item featured">
+              <h2>Holder 1</h2>
             </div>
-        </section>
-        <section class="section" id="contact-section">
-            <div class="section-wrapper">
-                <h1 class="section-title">Contact</h1>
-                <div class="form">
-                    <form id="contact-form">
-                        <div class="form-item">
-                            <label for="contact-name">Name :</label>
-                            <input type="text" id="contact-name" name="name">
-                        </div>
-                        <div class="form-item">
-                            <label for="contact-email">Email :</label>
-                            <input type="text" id="contact-email" name="email">
-                        </div>
-                        <div class="form-item">
-                            <textarea id="contact-message">Message</textarea>
-                        </div>
-                        <div class="form-item">
-                            <input type="button" class="button" value="Submit">
-                        </div>
-                    </form>
-                </div>
+            <div class="project-grid-item">
+              <h2>Holder 2</h2>
             </div>
-        </section>
+            <div class="project-grid-item">
+              <h2>Holder 3</h2>
+            </div>
+            <div class="project-grid-item">
+              <h2>Holder 4</h2>
+            </div>
+
+            <div class="project-grid-item">
+              <h2>Holder 5</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="contact-section">
+        <div class="section-wrapper">
+          <h1 class="section-title">Contact</h1>
+          <div class="form">
+            <form id="contact-form">
+              <div class="form-item">
+                <label for="contact-name">Name :</label>
+                <input type="text" id="contact-name" name="name" />
+              </div>
+              <div class="form-item">
+                <label for="contact-email">Email :</label>
+                <input type="text" id="contact-email" name="email" />
+              </div>
+              <div class="form-item">
+                <textarea id="contact-message">Message</textarea>
+              </div>
+              <div class="form-item">
+                <input type="button" class="button" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="section-div">
-            <div class="footer">
-                <p>©2024 Dan Hayter</p>
-            </div>
+      <div class="section-div">
+        <div class="footer">
+          <p>©2024 Dan Hayter</p>
         </div>
+      </div>
     </footer>
     <script src="./resources/script/script.js"></script>
-</body>
-
+  </body>
 </html>
