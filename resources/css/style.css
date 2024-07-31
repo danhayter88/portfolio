@@ -245,7 +245,7 @@ main {
 .section-wrapper {
   max-width: 1200px;
   margin: auto;
-  padding: 0px 10px;
+  padding: 0px 0px;
 }
 
 #home-section img {
@@ -357,22 +357,29 @@ footer {
   text-align: center;
 }
 
+/* Styling the form section */
+
 #contact-form {
   display: flex;
   flex-direction: column;
+  max-width: 17rem;
   gap: 1rem;
-  align-items: center;
   color: var(--color-2);
-  margin: auto;
+  padding-bottom: 1rem;
+  margin-inline: auto;
 }
 
 .form-item {
-  justify-self: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  width: 200px;
+  margin: auto;
 }
 
 #contact-message {
-  width: 20rem;
-  max-width: 80%;
-  height: 10rem;
-  justify-self: center;
+  width: 100%;
+  height: 9rem;
 }
