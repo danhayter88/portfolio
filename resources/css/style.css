@@ -245,7 +245,7 @@ main {
 .section-wrapper {
   max-width: 1200px;
   margin: auto;
-  padding: 0px 0px;
+  padding-inline: 1rem;
 }
 
 #home-section img {
@@ -371,6 +371,7 @@ footer {
 
 .form-item {
   display: flex;
+  width: 100%;
   gap: 1rem;
 }
 
@@ -380,6 +381,6 @@ footer {
 }
 
 #contact-message {
-  width: 100%;
   height: 9rem;
+  flex: 1;
 }
